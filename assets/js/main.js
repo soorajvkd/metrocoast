@@ -1,30 +1,38 @@
-let scrollTimeout;
+$(document).ready(function () {
+  let scrollTimeout;
+  
+  // Show scroll state and set click behavior
+  $(".scrollState").click(function () {
+    $(window).scrollTop(0);
+  });
 
-document.addEventListener("scroll", () => {
-  const scrollState = document.querySelector(".scrollState");
+  document.addEventListener("scroll", () => {
+    const scrollState = document.querySelector(".scrollState");
 
-  // Show the scrollState element
-  scrollState.classList.add("visible");
+    // Show the scrollState element
+    scrollState.classList.add("visible");
 
-  // Clear the previous timeout if it's set
-  if (scrollTimeout) {
-    clearTimeout(scrollTimeout);
-  }
+    // Clear the previous timeout if it's set
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout);
+    }
 
-  // Set a timeout to hide the scrollState after scrolling stops
-  scrollTimeout = setTimeout(() => {
-    scrollState.classList.remove("visible");
-  }, 1000); // Adjust the time in milliseconds as needed
+    // Set a timeout to hide the scrollState after scrolling stops
+    scrollTimeout = setTimeout(() => {
+      scrollState.classList.remove("visible");
+    }, 1000); // Adjust the time in milliseconds as needed
 
-  // Update the progress circle
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercent = scrollTop / docHeight;
+    // Update the progress circle
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollTop / docHeight;
 
-  const progressCircle = document.querySelector(".progress");
-  const circleCircumference = 126; // Should match the `stroke-dasharray` value
-  progressCircle.style.strokeDashoffset = circleCircumference * (1 - scrollPercent);
+    const progressCircle = document.querySelector(".progress");
+    const circleCircumference = 126; // Should match the `stroke-dasharray` value
+    progressCircle.style.strokeDashoffset = circleCircumference * (1 - scrollPercent);
+  });
 });
+
 
 // Script to toggle menu
 document.addEventListener("DOMContentLoaded", function () {
