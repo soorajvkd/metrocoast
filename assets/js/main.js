@@ -196,3 +196,40 @@ $(".partnerSlider").slick({
     // instead of a settings object
   ],
 });
+
+// Email Subscription Form Script Start Here //
+
+$("#submit-form").submit((e) => {
+  e.preventDefault();
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbyIVXz_DQXc7G4uU3ba7TgpZfaOUl4k33saggxVq2K3mOcoiQQSWyNHcqLd3BpNq5Mh/exec ",
+    data: $("#submit-form").serialize(),
+    method: "post",
+    success: function (response) {
+      // Use SweetAlert for success message
+      Swal.fire({
+        icon: 'success',
+        title: 'You subscribed successfully',
+        showConfirmButton: false,
+        timer: 1500  // Automatically close after 1.5 seconds
+      }).then(() => {
+        window.location.reload();
+      });
+    },
+    error: function (err) {
+      // Use SweetAlert for error messagec
+      Swal.fire({
+        icon: 'error',
+        title: 'Something went wrong',
+        text: 'Please try again later.',
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'OK'
+      });
+    }
+  });
+});
+
+
+
+

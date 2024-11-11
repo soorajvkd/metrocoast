@@ -36,6 +36,8 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
     />
+        <!-- ajax request -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body class="contact">
     <div class="scrollState">
@@ -349,11 +351,11 @@
         </div>
         <div class="form">
           <h2>Get In Touch</h2>
-          <form action="">
-            <input type="text" placeholder="Your Name*" required />
-            <input type="text" placeholder="Company Name*" />
-            <input type="text" placeholder="Email Address*" required />
-            <select type="text" placeholder="Select Subject*" required>
+          <form id="submit-form" method="post" name="form" action="">
+            <input type="text" placeholder="Your Name*" name="name" required />
+            <input type="text" placeholder="Company Name*" name="company" />
+            <input type="text" placeholder="Email Address*" name="email"  required />
+            <select type="text" placeholder="Select Subject*" name="subject"  required>
               <option value="">Select Subject*</option>
               <option value="1">Product Development</option>
               <option value="2">Innovation</option>
@@ -361,7 +363,7 @@
               <option value="4">Other</option>
             </select>
             <textarea
-              name=""
+              name="message"
               id=""
               rows="10"
               placeholder="Write Your Message*"
@@ -452,6 +454,10 @@
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/sweetalert2.min.js"></script>
+
   </body>
 </html>
