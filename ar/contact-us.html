@@ -37,8 +37,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
     />
 
-      <!-- ajax request -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- ajax request -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body class="contact">
     <div class="scrollState">
@@ -50,7 +50,7 @@
     </div>
 
     <div class="whatsapp">
-      <a href="https://wa.me/">
+      <a href="https://wa.me/+966569121606">
         <img src="./assets/img/whatsapp.png" alt="" />
       </a>
     </div>
@@ -365,19 +365,34 @@
         </div>
         <div class="form">
           <h2>تواصل معنا</h2>
-          <form action="">
-            <input type="text" placeholder="اسمك*" required/>
-            <input type="text" placeholder="اسم الشركة*" />
+          <form id="submit-contact" action="">
+            <input name="name" type="text" placeholder="اسمك*" required />
+            <input name="company" type="text" placeholder="اسم الشركة*" />
 
-            <input type="text" placeholder="عنوان البريد الإلكتروني*" required />
-            <select type="text" placeholder="اختر الموضوع*" >
+            <input
+              name="email"
+              type="email"
+              placeholder="عنوان البريد الإلكتروني*"
+              required
+            />
+            <select
+              type="text"
+              placeholder="اختر الموضوع*"
+              name="subject"
+              required
+            >
               <option value="">اختر الموضوع*</option>
-              <option value="1">تطوير المنتج</option>
-              <option value="2">الابتكار</option>
-              <option value="3">خدمة العملاء</option>
-              <option value="4">أخرى</option>
+              <option value="تطوير المنتج">تطوير المنتج</option>
+              <option value="ابتكار">الابتكار</option>
+              <option value="خدمة العملاء">خدمة العملاء</option>
+              <option value="آخر">أخرى</option>
             </select>
-            <textarea name="" id="" rows="10" placeholder="اكتب رسالتك*"></textarea>
+            <textarea
+              name="message"
+              id=""
+              rows="10"
+              placeholder="اكتب رسالتك*"
+            ></textarea>
             <button id="contact-btn">إرسال الرسالة</button>
           </form>
         </div>
@@ -392,16 +407,30 @@
               <img src="./assets/img/main-logo2.png" alt="الشعار" />
             </div>
             <p>
-              تأسست مترو كوست في عام 2023 من قبل فريق من المهنيين الملتزمين الذين يفهمون الاحتياجات المتنوعة والمتغيرة للمشاريع والمنظمات الصناعية. من خلال مشاركتنا الكاملة في توزيع الأجهزة الكهربائية والميكانيكية والمنتجات الفولاذية، فإننا نستمد اهتمامًا أكبر من احتياجاتك وأولوياتك ونعتقد أنه لا يوجد بديل لتطوير المنتجات والابتكار وخدمة العملاء الجيدة في سعينا لأن نكون الأفضل. تعتمد خدماتنا على أشخاص ذوي مهارات عالية، ومجموعة من خدمات الشراء والتوريد، والتكنولوجيا إلى جانب الخبرة والقدرة على تطبيقها لضمان ترجمة المنطقة أو إدارتنا المهنية إلى مزايا تنافسية لعملائنا.
+              تأسست مترو كوست في عام 2023 من قبل فريق من المهنيين الملتزمين
+              الذين يفهمون الاحتياجات المتنوعة والمتغيرة للمشاريع والمنظمات
+              الصناعية. من خلال مشاركتنا الكاملة في توزيع الأجهزة الكهربائية
+              والميكانيكية والمنتجات الفولاذية، فإننا نستمد اهتمامًا أكبر من
+              احتياجاتك وأولوياتك ونعتقد أنه لا يوجد بديل لتطوير المنتجات
+              والابتكار وخدمة العملاء الجيدة في سعينا لأن نكون الأفضل. تعتمد
+              خدماتنا على أشخاص ذوي مهارات عالية، ومجموعة من خدمات الشراء
+              والتوريد، والتكنولوجيا إلى جانب الخبرة والقدرة على تطبيقها لضمان
+              ترجمة المنطقة أو إدارتنا المهنية إلى مزايا تنافسية لعملائنا.
             </p>
             <div class="socials">
               <div class="social">
-                <a href="https://www.facebook.com/profile.php?id=61567275316707 " target="_blank">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61567275316707 "
+                  target="_blank"
+                >
                   <img src="./assets/img/icon/fb.svg" alt="فيسبوك" />
                 </a>
               </div>
               <div class="social">
-                <a href="https://www.instagram.com/metrocoast_trading_est/" target="_blank">
+                <a
+                  href="https://www.instagram.com/metrocoast_trading_est/"
+                  target="_blank"
+                >
                   <img src="./assets/img/icon/insta.svg" alt="انستغرام" />
                 </a>
               </div>
@@ -468,10 +497,41 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
 
-    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./assets/js/jquery-3.6.0.min.js"></script>
+     -->
     <script src="./assets/js/main.js"></script>
-    <script type="text/javascript" src="./assets/js/sweetalert2.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/sweetalert2.min.js"
+    ></script>
+    <script>
+      $("#submit-contact").submit((e) => {
+        e.preventDefault(); // Prevent the form from submitting the usual way
 
+        $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbxhjQm99FRsbASmNrJpeGprqLkgoWojpbFC7EDoPnQLL9MfjMasbH-PSK95o30E87ZgQA/exec",
+          data: $("#submit-contact").serialize(),
+          method: "POST", // Make sure the request method is POST
+          success: function () {
+            Swal.fire({
+              title: "Success!",
+              text: "Form Submitted Successfully.",
+              icon: "success",
+              confirmButtonText: "Ok",
+            });
+          },
+          error: function () {
+            Swal.fire({
+              title: "Error",
+              text: "Form Submission Failed.",
+              icon: "error",
+              confirmButtonText: "Try Again",
+            });
+          },
+        });
+      });
+    </script>
   </body>
 </html>

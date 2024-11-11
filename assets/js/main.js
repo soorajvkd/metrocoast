@@ -1,6 +1,6 @@
 $(document).ready(function () {
   let scrollTimeout;
-  
+
   // Show scroll state and set click behavior
   $(".scrollState").click(function () {
     $(window).scrollTop(0);
@@ -24,15 +24,16 @@ $(document).ready(function () {
 
     // Update the progress circle
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = scrollTop / docHeight;
 
     const progressCircle = document.querySelector(".progress");
     const circleCircumference = 126; // Should match the `stroke-dasharray` value
-    progressCircle.style.strokeDashoffset = circleCircumference * (1 - scrollPercent);
+    progressCircle.style.strokeDashoffset =
+      circleCircumference * (1 - scrollPercent);
   });
 });
-
 
 // Script to toggle menu
 document.addEventListener("DOMContentLoaded", function () {
@@ -199,37 +200,4 @@ $(".partnerSlider").slick({
 
 // Email Subscription Form Script Start Here //
 
-$("#submit-form").submit((e) => {
-  e.preventDefault();
-  $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbyIVXz_DQXc7G4uU3ba7TgpZfaOUl4k33saggxVq2K3mOcoiQQSWyNHcqLd3BpNq5Mh/exec ",
-    data: $("#submit-form").serialize(),
-    method: "post",
-    success: function (response) {
-      // Use SweetAlert for success message
-      Swal.fire({
-        icon: 'success',
-        title: 'You subscribed successfully',
-        showConfirmButton: false,
-        timer: 1500  // Automatically close after 1.5 seconds
-      }).then(() => {
-        window.location.reload();
-      });
-    },
-    error: function (err) {
-      // Use SweetAlert for error messagec
-      Swal.fire({
-        icon: 'error',
-        title: 'Something went wrong',
-        text: 'Please try again later.',
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'OK'
-      });
-    }
-  });
-});
-
-
-
-
+// Contact Form Submission
