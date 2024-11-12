@@ -1660,7 +1660,7 @@ footer .innerContainer .right .contact ul li .img-container img {
     min-height: 380px;
   }
   #testimonials .innerContainer h2 {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   footer .innerContainer .right {
@@ -1691,7 +1691,7 @@ footer .innerContainer .right .contact ul li .img-container img {
     font-size: 16px;
   }
   .about .wrapper .inner-container .right h2 {
-    font-size: 35px;
+    font-size: 32px;
   }
   .about .wrapper .inner-container .right p {
     font-size: 14px;
@@ -1738,10 +1738,10 @@ footer .innerContainer .right .contact ul li .img-container img {
     font-family: "Poppins";
   }
   #products .innerContainer h2 {
-    font-size: 32px;
+    font-size: 29px;
   }
   .contact .wrapper .innerContainer h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
   .client .innerContainer .top h4 {
     font-size: 16px;
@@ -1754,7 +1754,7 @@ footer .innerContainer .right .contact ul li .img-container img {
     font-family: "Poppins";
   }
   #capabilities .innerContainer .subContainer h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
   #about .innerContainer {
     row-gap: 40px;
@@ -1774,13 +1774,36 @@ footer .innerContainer .right .contact ul li .img-container img {
   #capabilities .innerContainer .gridContainer {
     grid-template-columns: repeat(1, 1fr);
   }
-  #newsletter .innerContainer .left input {
-    padding-left: 0;
+  #newsletter .innerContainer .left form {
+    grid-template-columns: 1fr;
+    /* justify-items: center; */
+    gap: 10px;
   }
-  #newsletter .innerContainer .left input::placeholder {
-    padding-left: 20px;
+  #newsletter .innerContainer .left input {
+    border-radius: 10px;
+  }
+  #newsletter .innerContainer .left button {
+    width: 50%;
+    border-radius: 10px;
+  }
+  /* #newsletter .innerContainer .left button {
+    font-size: 13px;
+  } */
+  .contact .wrapper .innerContainer .form {
+    padding: 20px;
+  }
+  .contact .wrapper .innerContainer .form form input,
+  .contact .wrapper .innerContainer .form form select,
+  .contact .wrapper .innerContainer .form form textarea {
+    padding: 12px;
+  }
+  .contact .wrapper .innerContainer .form form input::placeholder,
+  .contact .wrapper .innerContainer .form form select::placeholder,
+  .contact .wrapper .innerContainer .form form textarea::placeholder {
+    font-size: 13px;
   }
 }
+
 
 @media screen and (max-width: 420px) {
   #count {
