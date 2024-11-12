@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Metro Coast Trading Est</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icon/mmi-01.png"
+      type="image/x-icon"
+    />
 
     <!-- Head to copy -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -493,6 +498,7 @@
               icon: "success",
               confirmButtonText: "Ok",
             });
+            $("#submit-contact")[0].reset(); // Clear the form input fields
           },
           error: function () {
             Swal.fire({
