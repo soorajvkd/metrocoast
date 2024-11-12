@@ -1774,12 +1774,19 @@ footer .innerContainer .right .contact ul li .img-container img {
   #capabilities .innerContainer .gridContainer {
     grid-template-columns: repeat(1, 1fr);
   }
+  #newsletter .innerContainer .left input {
+    padding-left: 0;
+  }
+  #newsletter .innerContainer .left input::placeholder {
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 420px) {
   #count {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media screen and (max-width: 380px) {
